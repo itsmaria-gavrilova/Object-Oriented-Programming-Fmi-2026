@@ -16,7 +16,7 @@ class ConsolePrinter
 
 public:
 	ConsolePrinter();
-	explicit ConsolePrinter(Predicate func);
+	explicit ConsolePrinter(const Predicate& func);
 
 	void print(const char* str) const;
 	void println(const char* str) const;
