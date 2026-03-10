@@ -396,13 +396,13 @@ std::transform(nums.begin(), nums.end(), squared.begin(),
 ```cpp
 #include <iostream>
 #include <functional>
-#include <map>
+#include <unordered_map>
 #include <string>
 
 class Calculator {
 private:
     // Речник: символ → функция
-    std::map<std::string, std::function<double(double, double)>> operations;
+    std::unordered_map<std::string, std::function<double(double, double)>> operations;
 
 public:
     Calculator() {
