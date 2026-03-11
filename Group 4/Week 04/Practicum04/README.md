@@ -57,8 +57,10 @@ enum class ErrorCode {
 ---
 
 ### Клас `Company`
-
+<details> <summary> Hint за Singleton </summary>
 Класът е имплементиран като **Singleton** — може да съществува най-много една инстанция на фирмата. Конструкторът е `private`, копирането и присвояването са забранени, а достъпът до инстанцията става единствено чрез статичен метод.
+</details>
+
 #### Атрибути:
 
 - `static Company* instance` - указател към единствената инстанция;
@@ -66,10 +68,13 @@ enum class ErrorCode {
 - `unsigned countOfDepartments`
 
 #### Методи:
+<details> <summary> Hint Za Singleton Metodite </summary>
 
-- - `static Company& getInstance()` - връща референция към единствената инстанция; създава я при първо извикване.
+- `static Company& getInstance()` - връща референция към единствената инстанция; създава я при първо извикване.
 - *Конструкторът е `private`* — предотвратява директното създаване на обекти.
 - *Copy конструкторът и `operator=` са изтрити* — предотвратяват копирането на инстанцията.
+</details>
+
 - `ErrorCode addDepartment(const char* name)` - добавя отдел към фирмата.
 - `ErrorCode removeDepartment(const char* name)` - премахва отдел от фирмата.
 - `ErrorCode addEmployeeToDepartment(const char* departmentName, const Employee& employee)` - добавя служител към определен отдел.
